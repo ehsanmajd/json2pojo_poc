@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "id": "http://bestseller.com/OrderStatusUpdated.json",
+  "type": "object",
+  "description": "Message representing an order last status.",
+  "required": [
+    "orderId",
+    "payload",
+    "type"
+  ],
+  "properties": {
+    "orderId": {
+      "id": "/properties/orderId",
+      "type": "string"
+    },
+    "payload": {
+      "existingJavaType": "com.bse.common.customAnnotator.models.Payload"
+    },
+    "type": {
+      "id": "/properties/type",
+      "type": "string",
+      "enum": [
+        "ROUTED",
+        "ROUTING",
+        "ACKNOWLEDGED",
+        "DISPATCHED",
+        "RETURNED"
+      ]
+    }
+  }
+}
